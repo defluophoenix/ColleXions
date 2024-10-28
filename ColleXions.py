@@ -28,10 +28,10 @@ logging.basicConfig(
 )
 
 # Configuration file path
-CONFIG_FILE = 'config.json'
+CONFIG_FILE = '/path/to/config.json'
 
 # File to store the selected collections per day
-SELECTED_COLLECTIONS_FILE = 'selected_collections.json'
+SELECTED_COLLECTIONS_FILE = '/path/to/selected_collections.json'
 
 # Load the selected collections and clean up old entries (older than 3 days)
 def load_selected_collections():
@@ -220,6 +220,7 @@ def filter_collections(config, all_collections, special_collections, collection_
     
     logging.info(f"Final collections to pin for {library_name}: {[c.title for c in collections_to_pin]}")
     return collections_to_pin
+
 
 
 
